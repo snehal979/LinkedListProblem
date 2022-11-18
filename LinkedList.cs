@@ -100,5 +100,18 @@ namespace LinkedListProblem
                 Console.WriteLine(this.head);
             }
         }
+        public void RemoveFirstNode()
+        {
+            if(this.head == null)
+            {
+                Console.WriteLine("linked list is empty");
+
+            }
+            else
+            {
+                this.head = this.head.next;
+            }
+        }
+
     }
 }
