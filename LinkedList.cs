@@ -100,6 +100,10 @@ namespace LinkedListProblem
                 Console.WriteLine(this.head);
             }
         }
+        /// <summary>
+        /// uc4
+        /// 
+        /// </summary>
         public void RemoveFirstNode()
         {
             if(this.head == null)
@@ -111,6 +115,53 @@ namespace LinkedListProblem
             {
                 this.head = this.head.next;
             }
+        }
+        /// <summary>
+        /// uc6
+        /// </summary>
+        public void LastRemove()
+        {
+            if(head == null)
+            {
+                Console.WriteLine("linked list is empty");
+            } else if(head.next == null)
+            {
+                head = null;
+            }
+            else
+            {
+                Node newNode = head;
+                while(newNode.next.next != null)
+                {
+                    newNode = newNode.next;
+                }
+                newNode.next = null;
+            }
+        }
+        /// <summary>
+        /// uc7, Uc8
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public int Search(int value)
+        {
+            Node node = this.head;
+            if(node == null)
+            {
+                return -1;
+            }
+            int count = 0;
+            while(node !=null)
+            {
+                if(node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
+
         }
 
     }
