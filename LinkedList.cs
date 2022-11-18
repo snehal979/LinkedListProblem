@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace LinkedListProblem
 {
@@ -139,7 +140,7 @@ namespace LinkedListProblem
             }
         }
         /// <summary>
-        /// uc7, Uc8
+        /// uc7 position
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -153,6 +154,7 @@ namespace LinkedListProblem
             int count = 0;
             while(node !=null)
             {
+                
                 if(node.data == value)
                 {
                     return count;
@@ -162,6 +164,30 @@ namespace LinkedListProblem
             }
             return count;
 
+        }
+        /// <summary>
+        /// uc7 8 value 
+        /// </summary>
+        /// <param name="value"></param>
+        public void SearchNUM(int value)
+        {
+            
+            
+            
+
+                if (this.head.data == value)
+                {
+                    Console.WriteLine("found"); 
+                }
+                else
+                {
+                    Console.WriteLine("not found"); 
+
+                }
+                //this.head = this.head.next;
+                
+            
+           
         }
 
     }

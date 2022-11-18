@@ -9,6 +9,7 @@
             linkedList.Add(30);
             linkedList.Add(56);
             linkedList.Add(70);
+            linkedList.Display();
             //linkedList.AddInREverseOrder(30);
             //linkedList.AddInREverseOrder(56);
             //linkedList.AddInREverseOrder(70);
@@ -19,9 +20,12 @@
 
             //linkedList.RemoveFirstNode();
             //linkedList.Display();
+            //linkedList.LastRemove();
+            //linkedList.Display();
+            //int a =linkedList.Search(79);
+            //Console.WriteLine(a);
 
-            int a =linkedList.Search(79);
-            Console.WriteLine(a);
+            linkedList.SearchNUM(98);
             
 
 
