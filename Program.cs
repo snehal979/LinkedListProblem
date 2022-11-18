@@ -1,49 +1,65 @@
-﻿using System.Xml.Serialization;
-
-namespace AddressBookData
+﻿namespace LinkedListProblem
 {
     class Program
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book Program");
-            bool flag = true;
-            AddressBookMain addressBookMain = new AddressBookMain();
-            while(flag)
+            LinkedList linkedList = new LinkedList();
+            linkedList.Add(30);
+            linkedList.Add(56);
+            linkedList.Add(70);
+            Console.WriteLine("1.add \n 2.addinsertedat position\n 3.display\n 4.removefirst\n5.removelast\n6.search position of value\n 7.reversemethod");
+            int choice =Convert.ToInt32(Console.ReadLine());
+            switch (choice)
             {
+                case 1:
+                    linkedList.Add(78);
+                    
+                    linkedList.Display();
+                    break;
+                case 2:
+                    linkedList.InsertedAtParticularPosition(3, 45);
+                    linkedList.Display();
+                    break;
+                case 3:
+                    linkedList.Display();
+                    break;
+                case 4:
+                    linkedList.RemoveFirstNode();
+                    linkedList.Display();
+                    break;
+                case 5:
+                    linkedList.LastRemove();
+                    linkedList.Display();
+                    break;
+                case 6:
+                    int a =linkedList.Search(79);
+                    Console.WriteLine(a);
 
-                Console.WriteLine("Select 1.CreateContact \n 2.Edit Contact\n 3.Delete contact \n4.Display contacts \n5.Create Dictionary \n6.Display Dictionary\n 7.Exit");
+                    linkedList.SearchNUM(98);
 
-                int option = Convert.ToInt32(Console.ReadLine());
-                switch (option)
-                {
-                    case 1:
-                        addressBookMain.NewCreateContact();
-                        break;
-                    case 2:
-                        addressBookMain.UpdateContact();
-                        break;
-                    case 3:
-                        addressBookMain.DeleteContact();
-                        break;
-                    case 4:
-                        addressBookMain.Display();
-                        break;
-                    case 5:
-                        addressBookMain.CreateDictionary();
-                        break;
-                    case 6:
-                        addressBookMain.DisplayDictionary();
-                        break;
-                    case 7:
-                        flag = false;
-                        break;
+                    break;
+                case 7:
+                    linkedList.AddInREverseOrder(30);
+                    linkedList.AddInREverseOrder(56);
+                    linkedList.AddInREverseOrder(70);
+                    linkedList.Display();
 
-                }
-
-            } 
+                    break;
+                
+            }
+            
+           
+            
 
             
+
+            
+            
+
+
+
+
         }
     }
 }
