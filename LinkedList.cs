@@ -171,24 +171,38 @@ namespace LinkedListProblem
         /// <param name="value"></param>
         public void SearchNUM(int value)
         {
-            
-            
-            
 
-                if (this.head.data == value)
-                {
-                    Console.WriteLine("found"); 
-                }
-                else
-                {
-                    Console.WriteLine("not found"); 
+            if (this.head.data == value)
+            {
+                Console.WriteLine("found");
+            }
+            else
+            {
+                Console.WriteLine("not found");
 
-                }
-                //this.head = this.head.next;
-                
-            
-           
+            }
+
         }
+        public void Size()
+        {
+            Node temp = this.head;
+            int count = 0;
+            if(temp == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            else
+            {
+                while (temp != null)
+                {
+                    Console.WriteLine(temp.data+" ");
+                    temp = temp.next;
+                    count++;
+                }
+                Console.WriteLine("lenght of the linked list is "+count);
+            }
+        }
+        
 
     }
 }
