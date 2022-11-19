@@ -202,7 +202,25 @@ namespace LinkedListProblem
                 Console.WriteLine("lenght of the linked list is "+count);
             }
         }
-        
+        public void DelectAtparticularPosition(int position)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("linked list is empty");
+            }
+            Node temp = this.head;
+            if (position == 0)
+            {
+                this.head = temp.next;
+            }
+            for (int i = 0; temp !=null&& i<position-1; i++)
+            {
+                temp = temp.next;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+            Size();
+        }
 
     }
 }
