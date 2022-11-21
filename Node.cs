@@ -10,11 +10,14 @@ namespace LinkedListProblem
     {
         public int data;
         public Node next;
+        
 
         //constructor
         public Node(int data)
         {
             this.data = data;
+           
+          
         }
 
     }

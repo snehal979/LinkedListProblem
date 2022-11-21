@@ -1,14 +1,18 @@
-﻿namespace LinkedListProblem
+﻿using Microsoft.VisualBasic;
+using System.Security.Cryptography.X509Certificates;
+
+namespace LinkedListProblem
 {
     class Program
     {
         public static void Main(string[] args)
         {
+            StackLinkedList stackLinkedList = new StackLinkedList();
             LinkedList linkedList = new LinkedList();
             linkedList.Add(30);
             linkedList.Add(56);
             linkedList.Add(70);
-            Console.WriteLine("1.add \n 2.addinsertedat position\n 3.display\n 4.removefirst\n5.removelast\n6.search position of value\n 7.reversemethod \n 8.size\n 9.delectatPostion");
+            Console.WriteLine("1.add \n 2.addinsertedat position\n 3.display\n 4.removefirst\n5.removelast\n6.search position of value\n 7.reversemethod \n 8.size\n 9.delectatPostion\n 11.stack list");
             int choice =Convert.ToInt32(Console.ReadLine());
             switch (choice)
             {
@@ -47,25 +51,55 @@
 
                     break;
                 case 8:
-                    linkedList.Size();
+
+                    int b =linkedList.Size();
+                    Console.WriteLine(b);
                     break;
                     case 9:
                     linkedList.DelectAtparticularPosition(1);
                     break;
-                
+                case 10:
+                    int x =linkedList.AddSortLinkedList(5);
+                    int y =linkedList.AddSortLinkedList(10);
+                   int z = linkedList.AddSortLinkedList(15);
+
+                    linkedcompariorMethod(x,y,z);
+                    break;
+                case 11:
+                    stackLinkedList.Push(30);
+                    stackLinkedList.Push(56);
+                    stackLinkedList.Push(70);
+                    stackLinkedList.Display();
+                    stackLinkedList.Peek();
+                    stackLinkedList.Pop();
+                    stackLinkedList.Display();
+                    break;
+                    case 12:
+                    QueueLinkedList queueLinkedList = new QueueLinkedList();
+                    queueLinkedList.enqueue(30);
+                    queueLinkedList.enqueue(56);
+                    queueLinkedList.enqueue(70);
+                    queueLinkedList.Display();
+                    queueLinkedList.Dequeue();
+                    queueLinkedList.Display();
+                    break;
+
+
+
             }
-            
-           
-            
-
-            
-
-            
-            
 
 
 
 
+        }
+        public static void linkedcompariorMethod(int x,int y,int z)
+        {
+            if (x.CompareTo(y)>0 &&x.CompareTo(z)>0)
+                Console.WriteLine(x);
+            if (y.CompareTo(x)>0 &&y.CompareTo(z)>0)
+                Console.WriteLine(y);
+            if (z.CompareTo(x)>0 &&z.CompareTo(y)>0)
+                Console.WriteLine(z);
         }
     }
 }
